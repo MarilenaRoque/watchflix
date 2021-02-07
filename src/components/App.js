@@ -1,10 +1,9 @@
 import React from 'react';
+import MovieList from '../containers/MovieList'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Init Application</h1>
-    </div>
+    <MovieList />
   );
 }
 
