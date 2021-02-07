@@ -4,6 +4,7 @@ import store from '../redux/store';
 import { useEffect } from 'react';
 import moviesRequest from '../redux/thunkFunction';
 import { connect } from 'react-redux';
+import {getterMoviesWithInfo} from "../redux/getters";
 
 
 const MovieList = ({ moviesList }) => {
@@ -18,7 +19,7 @@ const MovieList = ({ moviesList }) => {
     )
 }
 
-const mapStateToProps = state => ({ moviesList: state.movies.movies.join() });
+const mapStateToProps = state => ({ moviesList: getterMoviesWithInfo(state).join()});
 // MovieList.propTypes = {
 
 // }
