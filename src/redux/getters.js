@@ -7,6 +7,7 @@ const getterMoviesWithInfo = state => {
 const mappingMovies = movie => {
     return {
         title: movie.title,
+        id: movie.id,
     }
 }
 

@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import {getterMoviesWithInfo} from "../redux/getters";
 
 
+
 const MovieList = ({ moviesList }) => {
     console.log(store.getState())
     let mounthFirst = true;
@@ -15,15 +16,20 @@ const MovieList = ({ moviesList }) => {
             moviesRequest();
             mounthFirst = false;
         }
-    });
+    }, []);
     return (
         <div>
-            <h1>{moviesList}</h1>
+            {moviesList && moviesList.length
+          ? moviesList.map(movie => (
+              <h1 key={movie.id}>{movie.title}</h1>
+            
+          ))
+          : (<h1>No books yet! :(</h1>)}
         </div>
     )
 }
 
-const mapStateToProps = state => ({ moviesList: getterMoviesWithInfo(state).join()});
+const mapStateToProps = state => ({ moviesList: getterMoviesWithInfo(state)});
 // MovieList.propTypes = {
 
 // }
