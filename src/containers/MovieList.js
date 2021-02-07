@@ -9,8 +9,12 @@ import {getterMoviesWithInfo} from "../redux/getters";
 
 const MovieList = ({ moviesList }) => {
     console.log(store.getState())
+    let mounthFirst = true;
     useEffect(() => {
-        moviesRequest();
+        if (mounthFirst) {
+            moviesRequest();
+            mounthFirst = false;
+        }
     });
     return (
         <div>
