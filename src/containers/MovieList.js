@@ -1,15 +1,17 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import store from '../redux/store'
-// fetchMoviesFailure, fetchMoviesLoading, 
-import {fetchMoviesLoading} from '../redux/actiontTypes'
+import {useEffect} from 'react';
+import moviesRequest from '../redux/thunkFunction'
 
 const MovieList = props => {
-    store.dispatch(fetchMoviesLoading())
     console.log(store.getState())
+    useEffect(() => {
+        moviesRequest();
+    });
     return (
         <div>
-            <h1>Something</h1>
+            <h1>{store.requesting}</h1>
         </div>
     )
 }

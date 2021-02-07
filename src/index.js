@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import { getAll } from './api/requests'
+import { getMovies } from './api/requests'
 
-const movies = getAll()
+const movies = getMovies()
 movies.then(data => console.log(data.results))
 
 ReactDOM.render(
