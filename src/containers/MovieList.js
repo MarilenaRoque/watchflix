@@ -21,7 +21,10 @@ const MovieList = ({ moviesList }) => {
         <div>
             {moviesList && moviesList.length
           ? moviesList.map(movie => (
+              <>
               <h1 key={movie.id}>{movie.title}</h1>
+              <h6>{movie.genre}</h6>
+              </>
             
           ))
           : (<h1>No books yet! :(</h1>)}
