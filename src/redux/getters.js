@@ -1,4 +1,3 @@
-
 const getterMoviesWithInfo = state => {
     const movies = state.movies.movies;
     const moviesWithUsefulAttributes = movies.map(movie => mappingMovies(movie));

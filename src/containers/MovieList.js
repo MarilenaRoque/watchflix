@@ -1,6 +1,5 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-
 import store from '../redux/store';
 import { useEffect } from 'react';
 import moviesRequest from '../redux/thunkFunction';
@@ -15,7 +14,6 @@ const MovieList = ({ moviesList }) => {
     });
     return (
         <div>
-
             <h1>{moviesList}</h1>
         </div>
     )
