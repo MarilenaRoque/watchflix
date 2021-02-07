@@ -1,16 +1,14 @@
 
-const baseImageUrl = "https://image.tmdb.org/t/p/w500"
-// get movies from state and return movies objects with just the info of interest
-const moviesGetter = (moviesList) => {
-    return moviesList.movies.map(moviesInfo);
+const getterMoviesWithInfo = state => {
+    const movies = state.movies.movies;
+    const moviesWithUsefulAttributes = movies.map(movie => mappingMovies(movie));
+    return moviesWithUsefulAttributes;
 }
 
-// get a movie object and filter the useful info
-const moviesInfo = movie => {
+const mappingMovies = movie => {
     return {
         title: movie.title,
-        imgUrl: baseImageUrl + movie.backdrop_path,
     }
 }
 
-export { moviesGetter };
+export {getterMoviesWithInfo};

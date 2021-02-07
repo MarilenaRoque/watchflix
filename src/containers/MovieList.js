@@ -1,28 +1,30 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import store from '../redux/store'
-import {useEffect} from 'react';
-import moviesRequest from '../redux/thunkFunction'
-import { moviesGetter } from '../redux/getters'
+
+import store from '../redux/store';
+import { useEffect } from 'react';
+import moviesRequest from '../redux/thunkFunction';
 import { connect } from 'react-redux';
+import {getterMoviesWithInfo} from "../redux/getters";
 
 
-const MovieList = props => {
+const MovieList = ({ moviesList }) => {
     console.log(store.getState())
     useEffect(() => {
         moviesRequest();
     });
     return (
         <div>
-            <h1>{}</h1>
+
+            <h1>{moviesList}</h1>
         </div>
     )
 }
 
-const mapStateToProps = state => ({ list: moviesGetter(state.movies) });
-
-export default connect( mapStateToProps )(MovieList);
+const mapStateToProps = state => ({ moviesList: getterMoviesWithInfo(state).join()});
 // MovieList.propTypes = {
 
 // }
+export default connect( mapStateToProps )( MovieList );
+
 
