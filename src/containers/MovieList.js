@@ -24,6 +24,7 @@ const MovieList = ({ moviesList }) => {
               <>
               <h1 key={movie.id}>{movie.title}</h1>
               <h6>{movie.genre}</h6>
+              <img src={movie.imgUrl}></img>
               </>
             
           ))

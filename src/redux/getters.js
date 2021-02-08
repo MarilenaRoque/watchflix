@@ -1,4 +1,4 @@
-import { genresMap } from '../constants'
+import { genresMap, imgBaseUrl } from '../constants'
 
 const getterMoviesWithInfo = state => {
     const movies = state.movies.movies;
@@ -13,9 +13,10 @@ const mappingMovies = movie => {
         title: movie.title,
         id: movie.id,
         genre: setGenreById(movie.genre_ids[0]),
+        imgUrl: imgUrl(movie.backdrop_path)
     }
 }
 
-
+const imgUrl = imgCode => ( imgBaseUrl + imgCode );
 
 export {getterMoviesWithInfo};
