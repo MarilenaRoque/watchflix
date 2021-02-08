@@ -1,6 +1,6 @@
 import { FILTER_CHANGE } from '../../constants'
 
-const filterInitialState = 9999;
+const filterInitialState = "All";
 
 const filter = (state = filterInitialState, action) => {
     switch(action.type) {

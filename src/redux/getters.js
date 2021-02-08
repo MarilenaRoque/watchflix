@@ -1,7 +1,19 @@
 import { genresMap, imgBaseUrl } from '../constants'
 
-const getterMoviesWithInfo = state => {
-    const movies = state.movies.movies;
+const getMoviesByFilter = state => {
+    const filter = state.filter;
+    let movies = mapMovieInfo(state.movies)
+    if (filter != "All") {
+        console.log('I am filtering')
+        movies = movies.filter( movie => {
+            return movie.genre == filter;
+        })
+    }
+    return movies
+}
+
+const mapMovieInfo = state => {
+    const movies = state.movies;
     const moviesWithUsefulAttributes = movies.map(movie => mappingMovies(movie));
     return moviesWithUsefulAttributes;
 }
@@ -19,4 +31,4 @@ const mappingMovies = movie => {
 
 const imgUrl = imgCode => ( imgBaseUrl + imgCode );
 
-export {getterMoviesWithInfo};
+export {getMoviesByFilter};

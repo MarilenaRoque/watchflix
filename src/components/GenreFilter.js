@@ -14,8 +14,8 @@ const GenreFilter = ({ changeFilter }) => {
             changeFilter(e.target.value)
         }}
         >
-        <option key="all" value={9999}>All</option>
-        {Object.keys(genresMap).map(item => <option key={item} value={item}>{genresMap[item]}</option>)}
+        <option key="All" value={"All"}>All</option>
+        {Object.keys(genresMap).map(item => <option key={item} value={genresMap[item]}>{genresMap[item]}</option>)}
       </select>
         </div>
     )
