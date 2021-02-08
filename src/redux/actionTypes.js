@@ -1,4 +1,4 @@
-import { FETCH_MOVIES_FAILURE, FETCH_MOVIES_SUCCESS, FETCH_MOVIES_LOADING, FILTER_CHANGE} from '../constants'
+import { FETCH_MOVIES_FAILURE, FETCH_MOVIES_SUCCESS, FETCH_MOVIES_LOADING, FILTER_CHANGE, SET_MOVIE_ITEM} from '../constants'
 
 const fetchMoviesLoading = () => {
     return {
@@ -27,4 +27,11 @@ const changeFilter = filter => {
     }
 }
 
-export {fetchMoviesFailure, fetchMoviesLoading, fetchMoviesSuccess, changeFilter};
+const setMoviePage = movie => {
+    return {
+        type: SET_MOVIE_ITEM,
+        payload: movie,
+    }
+}
+
+export {fetchMoviesFailure, fetchMoviesLoading, fetchMoviesSuccess, changeFilter, setMoviePage};

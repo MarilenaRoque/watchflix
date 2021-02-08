@@ -1,9 +1,9 @@
 import React from 'react';
-import MovieList from '../containers/MovieList'
+import Routes from '../components/Routes'
 
 function App() {
   return (
-    <MovieList />
+    <Routes />
   );
 }
 
