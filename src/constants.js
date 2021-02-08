@@ -1,6 +1,7 @@
 export const FETCH_MOVIES_LOADING = 'FETCH_MOVIES_LOADING';
 export const FETCH_MOVIES_SUCCESS = 'FETCH_MOVIES_SUCCESS';
 export const FETCH_MOVIES_FAILURE = 'FETCH_MOVIES_FAILURE';
+export const FILTER_CHANGE = 'FILTER_CHANGE';
 
 export const genresMap = {
     28: "Action",

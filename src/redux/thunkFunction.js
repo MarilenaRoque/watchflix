@@ -1,5 +1,5 @@
 import store from './store'
-import {fetchMoviesFailure, fetchMoviesLoading, fetchMoviesSuccess} from './actiontTypes'
+import {fetchMoviesFailure, fetchMoviesLoading, fetchMoviesSuccess} from './actionTypes'
 import { getMovies } from '../api/requests'
 
 
