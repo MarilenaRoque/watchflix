@@ -6,7 +6,7 @@ import moviesRequest from '../redux/thunkFunction';
 import { connect } from 'react-redux';
 import {getterMoviesWithInfo} from "../redux/getters";
 import MovieCard from '../components/MovieCard';
-
+import GenreFilter from '../components/GenreFilter'
 
 
 const MovieList = ({ moviesList }) => {
@@ -20,6 +20,7 @@ const MovieList = ({ moviesList }) => {
     }, []);
     return (
         <div>
+            <GenreFilter></GenreFilter>
             {moviesList && moviesList.length
           ? moviesList.map(movie => (
             <MovieCard movie={movie} key={movie.id}></MovieCard>
