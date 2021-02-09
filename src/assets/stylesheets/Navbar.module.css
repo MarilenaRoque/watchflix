@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    padding: 18px;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 55px;
+}
+
+.navItems {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    align-items: center;
+}
