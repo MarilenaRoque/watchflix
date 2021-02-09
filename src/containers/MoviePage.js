@@ -3,20 +3,23 @@ import {
   } from "react-router-dom";
 import { useEffect } from 'react';
 import { singleMovieRequest } from '../redux/thunkFunction'
+import { connect } from 'react-redux';
 
-const MoviePage = () => {
+const MoviePage = ({ movie }) => {
     const { id } = useParams();
 
     useEffect(() => {
         singleMovieRequest(id)
     }, []);
 
-
     return (
         <div>
-            <h1>{id}</h1>
+            {movie ? <h1>{movie.original_title}</h1> : <h1>{'Book Not Found'}</h1>}
+            
         </div>
     )
 }
 
-export default MoviePage
+const mapStateToProps = state => ({ movie: state.moviePage.movie})
+
+export default connect(mapStateToProps)(MoviePage);

@@ -27,13 +27,13 @@ const changeFilter = filter => {
     }
 }
 
-const SetMovieLoading = () => {
+const setMovieLoading = () => {
     return {
         type: SET_MOVIE_LOADING,
     }
 }
 
-const SetMovieFailure = error => {
+const setMovieFailure = error => {
     return {
         type: SET_MOVIE_FAILURE,
         payload: error,
@@ -47,4 +47,4 @@ const setMovieSuccess = movie => {
     }
 }
 
-export {fetchMoviesFailure, fetchMoviesLoading, fetchMoviesSuccess, changeFilter, SetMovieLoading, setMovieSuccess, SetMovieFailure};
+export {fetchMoviesFailure, fetchMoviesLoading, fetchMoviesSuccess, changeFilter, setMovieLoading, setMovieSuccess, setMovieFailure};
