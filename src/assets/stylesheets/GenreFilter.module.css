@@ -1,0 +1,15 @@
+.select {
+    background-color: #CD363D;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.input {
+    background-color: #CD363D;
+    font-size: 30px;
+    color: white;
+    border: none;
+}
+

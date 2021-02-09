@@ -1,13 +1,14 @@
 import React from 'react'
 import { genresMap } from '../constants'
 import store from '../redux/store';
+import Styles from '../assets/stylesheets/GenreFilter.module.css'
 // import PropTypes from 'prop-types'
 
 const GenreFilter = ({ changeFilter }) => {
     console.log(store.getState())
     return (
-        <div>
-            <select
+        <div className={Styles.select}>
+            <select className={Styles.input}
         name="filter"
         id="filter"
         onChange={e => {
