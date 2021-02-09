@@ -8,6 +8,7 @@ import {getMoviesByFilter} from "../redux/getters";
 import MovieCard from '../components/MovieCard';
 import GenreFilter from '../components/GenreFilter'
 import { changeFilter } from '../redux/actionTypes'
+import Styles from '../assets/stylesheets/MovieList.module.css'
 
 
 const MovieList = ({ moviesList, changeFilter }) => {
@@ -22,11 +23,13 @@ const MovieList = ({ moviesList, changeFilter }) => {
     return (
         <div>
             <GenreFilter changeFilter={changeFilter}></GenreFilter>
-            {moviesList && moviesList.length
-          ? moviesList.map(movie => (
-            <MovieCard movie={movie} key={movie.id}></MovieCard>
-          ))
-          : (<h1>No books yet! :(</h1>)}
+            <div className={Styles.displayList}>
+                {moviesList && moviesList.length
+            ? moviesList.map(movie => (
+                <MovieCard movie={movie} key={movie.id}></MovieCard>
+            ))
+            : (<h1>No books yet! :(</h1>)}
+          </div>
         </div>
     )
 }
