@@ -9,6 +9,8 @@ import MovieCard from '../components/MovieCard';
 import GenreFilter from '../components/GenreFilter'
 import { changeFilter } from '../redux/actionTypes'
 import Styles from '../assets/stylesheets/MovieList.module.css'
+import MainPost from '../components/MainPost'
+
 
 
 const MovieList = ({ moviesList, changeFilter }) => {
@@ -22,6 +24,7 @@ const MovieList = ({ moviesList, changeFilter }) => {
     }, []);
     return (
         <div>
+            <MainPost />
             <GenreFilter changeFilter={changeFilter}></GenreFilter>
             <div className={Styles.displayList}>
                 {moviesList && moviesList.length
