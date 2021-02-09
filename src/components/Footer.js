@@ -12,7 +12,7 @@ const Footer = () => {
                 <img className={Styles.logo} src={logo} alt="Logo"/>
             </div>
             <div>
-                <p class="text-white pt-2"> Made with <span class={Styles.heart}>&#9825;</span> by Mari Roque Developer</p>
+                <p> Made with <span className={Styles.heart}>&#9825;</span> by Mari Roque Developer</p>
             </div>
             <div  className={Styles.right}> 
                 <p>Connect with the developer: </p>

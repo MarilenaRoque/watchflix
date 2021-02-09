@@ -29,3 +29,4 @@ export const genresMap = {
 }
 
 export const imgBaseUrl = "https://image.tmdb.org/t/p/w500/"
+export const imgPost = "https://image.tmdb.org/t/p/w1280"
