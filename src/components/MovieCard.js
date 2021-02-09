@@ -1,15 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Styles from '../assets/stylesheets/MovieCard.module.css'
 // import PropTypes from 'prop-types'
 
 const MovieCard = props => {
     const {id, title, genre, imgUrl } = props.movie;
     return (
-        <Link to={`/movie/${id}`}>
-            <h1 key={id}>{title}</h1>
-            <h6>{genre}</h6>
-            <img src={imgUrl}></img>
-        </Link>
+            <Link key={id} to={`/movie/${id}`}>
+                <div className={Styles.card}>
+                    <img src={imgUrl}></img>
+                    <button className={Styles.title} >{title}</button>
+                    <button type="button" className={Styles.genre} >{genre}</button>
+                </div>
+            </Link>
     )
 }
 

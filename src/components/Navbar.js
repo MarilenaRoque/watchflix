@@ -5,7 +5,7 @@ import Styles from '../assets/stylesheets/Navbar.module.css'
 
 const Navbar = () => {
     return (
-        <navbar className={Styles.navbar}>
+        <div className={Styles.navbar}>
             <Link to={"/"}>            
                     <div className={Styles.navItems}>
                     <img className={Styles.logo} src={logo} alt='Logo'></img>
@@ -18,7 +18,7 @@ const Navbar = () => {
                 <a target={"_blank"} href={"https://www.behance.net/gallery/97859577/X-MOVIES?tracking_source=search_projects_recommended%7Cmovies"}>Design</a>
                 <a target={"_blank"} href={"https://github.com/MarilenaRoque/watchflix"}>Development</a>
             </div>  
-        </navbar>
+        </div>
     )
 }
 
