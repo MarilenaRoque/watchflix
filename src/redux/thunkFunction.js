@@ -1,9 +1,9 @@
 import store from './store'
-import {fetchMoviesFailure, fetchMoviesLoading, fetchMoviesSuccess} from './actionTypes'
-import { getMovies } from '../api/requests'
+import {fetchMoviesFailure, fetchMoviesLoading, fetchMoviesSuccess, setMovieSuccess, SetMovieFailure, SetMovieLoading} from './actionTypes'
+import { getMovies, getSingleMovie } from '../api/requests'
 
 
-const moviesRequest = () => {
+export const moviesRequest = () => {
     store.dispatch(fetchMoviesLoading())
     const requestMovies = getMovies();
     requestMovies.then( (data) => {
@@ -15,4 +15,10 @@ const moviesRequest = () => {
     })
 }
 
-export default moviesRequest;
+export const singleMovieRequest = (id) => {
+    store.dispatch(SetMovieLoading())
+    const requestMovie = getSingleMovie(id);
+    requestMovie.then( (data) => {
+        console.log(data)
+    })
+}

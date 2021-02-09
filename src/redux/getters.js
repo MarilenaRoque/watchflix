@@ -1,4 +1,5 @@
 import { genresMap, imgBaseUrl } from '../constants'
+import store from '../redux/store';
 
 const getMoviesByFilter = state => {
     const filter = state.filter;
@@ -29,6 +30,12 @@ const mappingMovies = movie => {
     }
 }
 
+const getMovieById = id => {
+    const movie = store.getState().movies.movies
+    console.log(movie)
+    return movie;
+}
+
 const imgUrl = imgCode => ( imgBaseUrl + imgCode );
 
-export {getMoviesByFilter};
+export {getMoviesByFilter, getMovieById};

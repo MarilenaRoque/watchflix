@@ -5,7 +5,7 @@ import {
     Link
   } from "react-router-dom";
 import MovieList from '../containers/MovieList'
-import MoviePage from './MoviePage'
+import MoviePage from '../containers/MoviePage'
 
 import React from 'react'
 
