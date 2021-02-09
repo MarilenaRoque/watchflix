@@ -7,6 +7,7 @@ import {
 import MovieList from '../containers/MovieList'
 import MoviePage from '../containers/MoviePage'
 import Navbar from './Navbar'
+import MainPost from './MainPost'
 
 import React from 'react'
 
@@ -15,7 +16,7 @@ const Routes = () => {
         <div>
             <Router>
             <Navbar />
-            
+            <MainPost />
                 <div data-testid="page-content">
                     <Switch>
                         <Route exact path="/">
