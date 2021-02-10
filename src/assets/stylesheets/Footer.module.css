@@ -1,24 +1,25 @@
 .footer {
-    position: sticky;
-    width: 100%;
-    bottom: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    color: #101821;
-    padding: 10px 10px 1px 10px;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #101821;
+  padding: 10px 10px 1px 10px;
 }
 
 .logo {
-    height: 50px;
-    margin: 8px;
-}
-.right {
-    display: flex;
+  height: 50px;
+  margin: 8px;
 }
 
-.heart{
-    color: red;
-    font-weight: bolder;
+.right {
+  display: flex;
+}
+
+.heart {
+  color: red;
+  font-weight: bolder;
 }

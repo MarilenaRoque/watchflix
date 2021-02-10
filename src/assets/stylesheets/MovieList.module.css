@@ -1,18 +1,18 @@
 .title {
-    text-align: center;
-    margin: 10px;
+  text-align: center;
+  margin: 10px;
 }
 
 @media (min-width: 1000px) {
-    .displayList {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  .displayList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 1500px) {
-    .displayList {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  .displayList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
