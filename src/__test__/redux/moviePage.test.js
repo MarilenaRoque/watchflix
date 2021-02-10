@@ -12,6 +12,10 @@ const exampleActionFailure = {
   payload: 404,
 };
 
+const exampleActionLoading = {
+    type: 'SET_MOVIE_LOADING',
+};
+
 const initialState = {
   movie: null,
   loading: false,
@@ -45,4 +49,11 @@ describe('state of movie is changed when a SET_MOVIE_FAILURE is dispatched', () 
     const result = moviePage(initialState, exampleActionFailure);
     expect(result.loading).toEqual(false);
   });
+});
+
+describe('state of movie is changed when a SET_MOVIE_LOADING is dispatched', () => {
+    it('it should reset the loading state', () => {
+      const result = moviePage(initialState, exampleActionLoading);
+      expect(result.loading).toBeTruthy;
+    });
 });
