@@ -13,7 +13,7 @@ const exampleActionFailure = {
 };
 
 const exampleActionLoading = {
-    type: 'SET_MOVIE_LOADING',
+  type: 'SET_MOVIE_LOADING',
 };
 
 const initialState = {
@@ -52,8 +52,8 @@ describe('state of movie is changed when a SET_MOVIE_FAILURE is dispatched', () 
 });
 
 describe('state of movie is changed when a SET_MOVIE_LOADING is dispatched', () => {
-    it('it should reset the loading state', () => {
-      const result = moviePage(initialState, exampleActionLoading);
-      expect(result.loading).toBeTruthy;
-    });
+  it('it should reset the loading state', () => {
+    const result = moviePage(initialState, exampleActionLoading);
+    expect(result.loading).toBeTruthy();
+  });
 });
