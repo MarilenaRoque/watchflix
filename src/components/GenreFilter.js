@@ -1,30 +1,29 @@
-import React from 'react'
-import { genresMap } from '../constants'
-import store from '../redux/store';
-import Styles from '../assets/stylesheets/GenreFilter.module.css'
-// import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { genresMap } from '../constants';
+import Styles from '../assets/stylesheets/GenreFilter.module.css';
 
 const GenreFilter = ({ changeFilter }) => {
-    console.log(store.getState())
-    return (
-        <div className={Styles.select}>
-            <select className={Styles.input}
+  const mapping = item => <option key={item} value={genresMap[item]}>{genresMap[item]}</option>;
+  return (
+    <div className={Styles.select}>
+      <select
+        className={Styles.input}
         name="filter"
         id="filter"
         onChange={e => {
-            changeFilter(e.target.value)
+          changeFilter(e.target.value);
         }}
-        >
-        <option key="All" value={"All"}>All</option>
-        {Object.keys(genresMap).map(item => <option key={item} value={genresMap[item]}>{genresMap[item]}</option>)}
+      >
+        <option key="All" value="All">All</option>
+        {Object.keys(genresMap).map(mapping)}
       </select>
-        </div>
-    )
-}
+    </div>
+  );
+};
 
+GenreFilter.propTypes = {
+  changeFilter: PropTypes.func.isRequired,
+};
 
-// GenreFilter.propTypes = {
-
-// }
-
-export default GenreFilter
+export default GenreFilter;
