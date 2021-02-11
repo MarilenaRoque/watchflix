@@ -8,9 +8,10 @@ import MovieList from '../containers/MovieList';
 import MoviePage from '../containers/MoviePage';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Styles from '../assets/stylesheets/Routes.module.css';
 
 const Routes = () => (
-  <div style={{ position: 'relative' }}>
+  <div className={Styles.routeBody}>
     <Router>
       <Navbar />
       <div data-testid="page-content">
