@@ -1,0 +1,36 @@
+.title {
+  margin-top: 0;
+  text-align: center;
+  background-color: white;
+  color: #101821;
+}
+
+.poster {
+  height: 90vh;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
+  width: 80%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.rates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  max-height: 200px;
+}
+
+.star {
+  height: 50px;
+}

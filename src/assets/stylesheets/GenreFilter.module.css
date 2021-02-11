@@ -1,0 +1,13 @@
+.select {
+  background-color: #cd363d;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  background-color: #cd363d;
+  font-size: 30px;
+  color: white;
+  border: none;
+}

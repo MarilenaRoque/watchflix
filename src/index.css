@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-color: #101822;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
