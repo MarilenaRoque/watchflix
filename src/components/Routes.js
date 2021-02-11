@@ -7,9 +7,10 @@ import React from 'react';
 import MovieList from '../containers/MovieList';
 import MoviePage from '../containers/MoviePage';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Routes = () => (
-  <div>
+  <div style={{ position: 'relative' }}>
     <Router>
       <Navbar />
       <div data-testid="page-content">
@@ -23,6 +24,7 @@ const Routes = () => (
         </Switch>
       </div>
     </Router>
+    <Footer />
   </div>
 );
 
