@@ -1,0 +1,7 @@
+.banner {
+  background-image: url('mainpost.jpg');
+  height: 550px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
